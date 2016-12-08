@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="/home/nawel/Téléchargements/eclipse-installer/jre" version="1.8.0_111">
+<bootpath>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/resources.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/rt.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/sunrsasign.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/jsse.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/jce.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/charsets.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/jfr.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/ext"/>
+<entry path="/usr/java/packages/lib/ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="/home/nawel/Téléchargements/eclipse-installer" version="1.8.0_111">
+<bootpath>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/resources.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/rt.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/sunrsasign.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/jsse.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/jce.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/charsets.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/jfr.jar"/>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/ext"/>
+<entry path="/usr/java/packages/lib/ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="/home/nawel/Téléchargements/eclipse-installer/jre/lib/endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

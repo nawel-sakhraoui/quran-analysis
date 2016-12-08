@@ -1,0 +1,18 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/home/nawel/quranstat/.metadata/.plugins/org.eclipse.core.resources/.projects/testpydev/com.python.pydev.analysis/v2_indexcache
+test|1478187611000000000|/home/nawel/quranstat/QuranStat/testpydev/test.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=test
+-- END DICTIONARY
+-- START TREE 1
+3
+cor|1|corpus!11@
+tfi|1|tfidf!11@
+vec|1|vec!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

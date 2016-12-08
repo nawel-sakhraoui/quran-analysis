@@ -1,0 +1,264 @@
+'use strict';
+
+var app = angular.module('QSIApp', ['elasticsearch','angular-advanced-searchbox','ngMaterial', 'smart-table']); 
+/*
+
+app.service('client', function (esFactory) {
+	  return esFactory({ host: 'localhost:9200/'});
+	  
+	});
+*/
+
+app.factory('elastic_word', ["$http",  function ($http ){
+	var elastic = {};
+	elastic.search = function (query, domain ) {    
+		//return $http.get("localhost:9200/my_index/_search?q=_all:"+ val)
+		return $http(
+				{
+			
+				method: "POST" ,
+				url: "http://localhost:5000/words",
+				//url : "http://127.0.0.1:9200/quran-index/ayats/_search?q="+"الفِيل" ,
+				//params :{"query":{"match_all":{}}},
+				data:  { query , "domain" : domain },// {"query":{"term":{"السورة":"الفِيل"}}},
+				headers : {'Content-Type' : 'application/x-www-form-urlencoded' }
+				})
+		};
+	return elastic  ;
+}]);
+
+app.factory('elastic_ayat', ["$http",  function ($http ){
+	var elastic = {};
+	elastic.search = function (query, domain ) {    
+		//return $http.get("localhost:9200/my_index/_search?q=_all:"+ val)
+		return $http(
+				{
+			
+				method: "POST" ,
+				url: "http://localhost:5000/ayats",
+				//url : "http://127.0.0.1:9200/quran-index/ayats/_search?q="+"الفِيل" ,
+				//params :{"query":{"match_all":{}}},
+				data:  { query , "domain" : domain },// {"query":{"term":{"السورة":"الفِيل"}}},
+				headers : {'Content-Type' : 'application/x-www-form-urlencoded' }
+				});
+		};
+	return elastic  ;
+}]);
+
+
+
+app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope)  {
+	
+		$scope.availableSearchParams = [
+          { key: "السورة", name: "السورة", placeholder: "السورة" },
+          { key: "مكان النزول", name: "مكان النزول", placeholder: "مكان النزول" },
+          { key: "ترتيب السورة", name: "ترتيب السورة", placeholder: "ترتيب السورة" },
+          { key: "الآية", name: "الآية", placeholder: "الآية", allowMultiple: true },
+          
+        ];
+		
+		$rootScope.domain = "بحث عام";
+
+		  
+		$scope.radioData = [
+		      { label: 'بحث عام', value: "بحث عام" },
+		      { label: '2', value: "2" },
+		      { label: '3', value: "3", isDisabled: true },
+		      { label: '4', value: "4" }
+		 ];
+		
+		
+		
+		$rootScope.rest =[]; 
+	 	$scope.keyflag = 0;
+	
+	 	
+	    /*client.search({
+	        index: 'quran-index',
+	        size: 5,
+	        body: {
+	        	
+	        	"query":
+	            {
+	                "match": {
+	                    title:"Product1"
+	                }   
+	            },
+	            
+	        }
+	           
+	        }).then(function (response) {
+	          $scope.hits = response.hits.hits;
+	        });
+	    
+	 	*/
+	 	/*client.cluster.health(function (err, resp) {
+	        if (err) {
+	            $scope.hits = err;
+	        } else {
+	            $scope.hits = resp;
+	        }
+	    });*/
+	    
+	    
+	 	$scope.checkIfEnterKeyWasPressed = function f1 ($event ){
+		    var keyCode = $event.which || $event.keyCode;
+		    if (keyCode === 13 ) {
+		    	
+		    	if (Object.keys($scope.searchParams).length !== 0 ) 
+			 		
+		 		{
+		    		
+		    	
+		    	$scope.keyflag += 1;
+				
+
+		    	elastic_word.search ($scope.searchParams, $rootScope.domain)
+		    	.success(function (data) {
+		    		$rootScope.rest  = data  ;
+	               
+	            })
+	            .error(function (error) {
+	            	$scope.error = error; 
+	            });
+		    	
+		 		}
+		    	
+		    }
+	 	};
+	 	
+	
+	 	 
+	 	  
+	 	  
+	 	$scope.$watch('domain', function() {
+	 		
+	 		if (Object.keys($scope.searchParams).length !== 0 ) 
+	 		
+	 		{
+	 			
+	 		$scope.keyflag += 1;
+	 			
+	 		elastic_word.search($scope.searchParams, $rootScope.domain)
+	 		.success(function (data) {
+	 			$rootScope.rest  = data  ; 
+            })
+            .error(function (error) {
+            	$scope.error = error ;
+            });
+	 		}
+	 		
+	 	});
+	 	
+	 	
+	 	  
+	 	$scope.$watch('searchParams', function() {
+	 		
+	 		if (Object.keys($scope.searchParams).length === 0 ) 
+	 		
+	 		{
+	 			
+	 		
+	 			$rootScope.rest  = []; 
+	 			$rootScope.rest2 = [];
+	 			
+	 		}
+	 		
+	 	});
+
+
+
+});
+
+app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat) {
+	$rootScope.rest2 = [];
+	
+	$scope.show = false ;  
+	$rootScope.$watch('rest', function() {
+		
+		if (Object.keys($rootScope.rest).length !== 0 ) {
+			$scope.show = true ; 
+		
+	
+	  $scope.items = $rootScope.rest ;
+	  $rootScope.selected = [];
+	  $scope.toggle = function (item, list) {
+	    var idx = list.indexOf(item);
+	    if (idx > -1) {
+	      list.splice(idx, 1);
+	    }
+	    else {
+	      list.push(item);
+	    }
+	  };
+
+	  $scope.exists = function (item, list) {
+	    return list.indexOf(item) > -1;
+	  };
+
+	  $scope.isIndeterminate = function() {
+	    return ($scope.selected.length !== 0 &&
+	        $scope.selected.length !== $scope.items.length);
+	  };
+
+	  $scope.isChecked = function() {
+	    return $scope.selected.length === $scope.items.length;
+	  };
+
+	  $scope.toggleAll = function() {
+	    if ($scope.selected.length === $scope.items.length) {
+	      $scope.selected = [];
+	    } else if ($scope.selected.length === 0 || $scope.selected.length > 0) {
+	      $scope.selected = $scope.items.slice(0);
+	    }
+	  };
+		} else {
+			$scope.show = false ;
+			
+		}
+	},true); 
+	
+	$rootScope.show2 = false;
+	$rootScope.$watchCollection('selected', function() {
+ 		
+		
+ 		if (Object.keys($rootScope.selected).length !== 0 ) 
+ 		
+ 		{
+ 		$rootScope.show2 = true 	;
+ 		elastic_ayat.search($rootScope.selected, $rootScope.domain)
+ 		.success(function (data) {
+ 			$rootScope.rest2  = data  ; 
+        })
+        .error(function (error) {
+        	$scope.error2 = error ;
+        });
+ 		}else { $rootScope.show2=false; }
+ 		
+ 	},true); 
+	
+	
+	$scope.selectbynum = function( dict){
+		
+		var keys = Object.keys(dict) ; 
+		
+		var kk = [] ; 
+		var dd = [] ; 
+		
+		for (var k in keys) {
+			if (k.isInteger()) {
+				kk.push(k);
+			}
+		};
+		kk.sort(); 
+		for (var k2  in kk ){
+			 dd.push(dict[k2]);
+		};
+		 
+		return dd ; 
+	};
+	
+});
+
+
+

@@ -1,0 +1,7 @@
+MODULES_MANAGER_V2
+CreateTrainDataSet|/home/nawel/quranstat/QuranStat/MLApplyToQuran/CreateTrainDataSet.py
+DeepBolzmanMachine|/home/nawel/quranstat/QuranStat/MLApplyToQuran/DeepBolzmanMachine.py
+IndexingData|/home/nawel/quranstat/QuranStat/MLApplyToQuran/IndexingData.py
+Knn|/home/nawel/quranstat/QuranStat/MLApplyToQuran/Knn.py
+sentencengrams|/home/nawel/quranstat/QuranStat/MLApplyToQuran/sentencengrams.py
+wordsngrams|/home/nawel/quranstat/QuranStat/MLApplyToQuran/wordsngrams.py

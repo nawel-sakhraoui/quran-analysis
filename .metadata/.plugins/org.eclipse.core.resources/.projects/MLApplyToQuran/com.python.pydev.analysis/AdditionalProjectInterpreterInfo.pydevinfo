@@ -1,0 +1,54 @@
+-- VERSION_4
+-- START DISKCACHE_2
+/home/nawel/quranstat/.metadata/.plugins/org.eclipse.core.resources/.projects/MLApplyToQuran/com.python.pydev.analysis/v2_indexcache
+IndexingData|1480431152000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/IndexingData.py
+CreateTrainDataSet|1479313693000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/CreateTrainDataSet.py
+Knn|1478187819000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/Knn.py
+sentencengrams|1478187616000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/sentencengrams.py
+DeepBolzmanMachine|1478187704000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/DeepBolzmanMachine.py
+wordsngrams|1478187704000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/wordsngrams.py
+-- END DISKCACHE
+-- START DICTIONARY
+3
+3=IndexingData
+2=CreateTrainDataSet
+1=Knn
+-- END DICTIONARY
+-- START TREE 1
+32
+a|1|a!11@
+all|1|all_words!19@
+aya|2|ayat_rep!19@ayat!19@
+c|1|c!27@
+c2|1|c2!27@
+c3|1|c3!27@
+col|2|columns!27@colums!27@
+com|1|compteur!19@
+d|1|d!27@
+d2|1|d2!27@
+d3|1|d3!27@
+dat|3|data!27@data_set!19@dataset_rep!27@
+es|1|es!27@
+fla|1|flag!27@
+ham|2|hamza!27@hamza_dict!27@
+i|1|i!19@
+ima|1|image!11@
+ind|1|index_list!27@
+ix|1|ix!27@
+j|1|j!19@
+l|1|l!19@
+lin|2|line!19@line!27@
+lis|1|list_keys!27@
+map|1|mapping!27@
+par|2|parent_rep!19@parent_rep!27@
+res|1|res!27@
+siz|1|size!19@
+sur|4|surat_dict!27@surat_rep!27@surat_rep!19@surat_data!19@
+tac|2|tachkil_dict!27@tachkil!27@
+tem|1|temp_dict!27@
+uni|1|unique_val_list!19@
+wor|1|word!19@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE
