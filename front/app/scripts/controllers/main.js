@@ -9,8 +9,7 @@ app.service('client', function (esFactory) {
 	});
 */
 
-app.factory("trie", function(){
-	
+app.factory("trie", function(){	
 	var trie = []; 
 	trie.selectbynum = function( dict){
 		
@@ -26,14 +25,10 @@ app.factory("trie", function(){
 		}
 		//kk.sort(); 
 		for (var k2  in kk ){
-			
-			
-				if (dict[k2]  ) {
+			if (dict[k2]  ) {
 					 dd.push(dict[k2]);
-				}
-		}
-		 
-		
+			}
+		}	
 		return dd; 
 	};
 	return trie ; 
@@ -88,47 +83,16 @@ app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope, $t
         ];*/
 		
 		$rootScope.domain = "بحث عام";
-
-		  
 		$scope.radioData = [
 		      { label: 'بحث عام', value: "بحث عام" },
 		      { label: 'الكلمات المتقاربة', value: "الكلمات المتقاربة" },
 		      { label: '3', value: "3", isDisabled: true },
-		      { label: '4', value: "4" }
+		      { label: '4', value: "4", isDisabled: true }
 		 ];
 		
 		
 		
 		$rootScope.rest =[]; 
-	 	$scope.keyflag = 0;
-	
-	 	
-	    /*client.search({
-	        index: 'quran-index',
-	        size: 5,
-	        body: {
-	        	
-	        	"query":
-	            {
-	                "match": {
-	                    title:"Product1"
-	                }   
-	            },
-	            
-	        }
-	           
-	        }).then(function (response) {
-	          $scope.hits = response.hits.hits;
-	        });
-	    
-	 	*/
-	 	/*client.cluster.health(function (err, resp) {
-	        if (err) {
-	            $scope.hits = err;
-	        } else {
-	            $scope.hits = resp;
-	        }
-	    });*/
 	    
 	    
 	 	$scope.checkIfEnterKeyWasPressed = function f1 ($event ){
@@ -140,10 +104,6 @@ app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope, $t
 		    	if (Object.keys($scope.searchParams).length !== 0 ) 
 			 		
 		 		{
-		    		
-		    	
-		    	$scope.keyflag += 1;
-				
 
 		    	elastic_word.search ($scope.searchParams, $rootScope.domain)
 		    	.success(function (data) {
@@ -163,15 +123,16 @@ app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope, $t
 	 	 
 	 	  
 	 	  
-	 	$scope.$watch('domain', function() {
+	 	$scope.domainchange = function f2( dom) {
+	 		$rootScope.domain = dom;
+	 		$rootScope.rest2 = {};
+ 			$rootScope.selected = [];
+	 		$timeout(function(){ 
 	 		
 	 		if (Object.keys($scope.searchParams).length !== 0 ) 
-	 		
-	 		{
+			{
 	 			
-	 		$scope.keyflag += 1;
-	 			
-	 		elastic_word.search($scope.searchParams, $rootScope.domain)
+	 		elastic_word.search($scope.searchParams, dom)
 	 		.success(function (data) {
 	 			$rootScope.rest  = data  ; 
             })
@@ -179,8 +140,9 @@ app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope, $t
             	$scope.error = error ;
             });
 	 		}
+	 		}, 1000);
 	 		
-	 	});
+	 	};
 	 	
 	 	
 	 	  
@@ -189,8 +151,6 @@ app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope, $t
 	 		if (Object.keys($scope.searchParams).length === 0 ) 
 	 		
 	 		{
-	 			
-	 		
 	 			$rootScope.rest  = []; 
 	 			$rootScope.rest2 = {};
 	 			$rootScope.selected = [];
@@ -206,7 +166,7 @@ app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie) {
 	$rootScope.rest2 = {};
 	$rootScope.selected = [];
 	$scope.show = false ;  
-	$rootScope.$watch('rest', function() {
+	$rootScope.$watchCollection('rest', function() {
 		$rootScope.selected = [];
 		if (Object.keys($rootScope.rest).length !== 0 ) {
 			$scope.show = true ; 
@@ -285,6 +245,21 @@ app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie) {
 	
 	$scope.select = trie ; 
 	// $rootScope.rest2.list_surats["الآية"].sort();
+	
+	
+	
+	$scope.inngrams = function f (key, list){
+		flag = false ;
+		for(var p in list ){
+			
+			if (p===key ){
+				flag =  true ; 
+			}
+		}
+		return flag ;
+		
+		
+	};
 });
 
 

@@ -15,12 +15,15 @@ body {
 .footer {
   padding-left: 15px;
   padding-right: 15px;
+  background-color: #F2F2F2;
+  
 }
 
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
+  background-color: #F2F2F2;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -85,4 +88,16 @@ body {
 md-checkbox.md-checked.green .md-icon {
  background-color: rgba(0, 135,206,250);
 }
+
+
+.listdemoBasicUsage md-divider {
+  margin-top: 10px;
+  margin-bottom: 0; }
+
+
+
+
+
+
+
 

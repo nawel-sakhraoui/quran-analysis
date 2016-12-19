@@ -55,7 +55,7 @@ for i in range (len(surat_dict)) :
 
 
 index_list = [  u"مكان_النزول", u"ترتيب_التنزيل" ,u"السورة" ,u"الآية",    u"الترتيب"  ]
-tachkil =   [u'ٍ'  ,u'ِ',  u'ْ', u'ٌ' , u'ُ' , u'ً' , u'َ', u'ّ']
+tachkil =   [u'ٍ'  ,u'ِ',  u'ْ', u'ٌ' , u'ُ' , u'ً' , u'َ', u'ّ', u'ؕ',u'َّ' , u'ِّ',  u'ُّ']
 #hurufatf = [u"و", u"ف", u"ثم", u"حتى", u"أو", u"أم", u"بل", u"لا", u"لكن", u"أ", u"ب", u"ل", u"ال"]
 hamza = [ u"أ", u"إ", u"آ", u"ٱ" ]
 #tachkil = tachkil+ hurufatf 

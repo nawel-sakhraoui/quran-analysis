@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
+    <!-- build:css(.tmp..styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -23,8 +23,10 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
+    <div class="header" >
+    
+    <img ng-src="../images/rsz_1essai.png" alt="Description" />
+      <!-- div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
 
@@ -47,49 +49,21 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div -->
     </div>
 	
 
       <div class="container"   >
-      	<div  ng-controller="MainCtrl" ng-keypress="checkIfEnterKeyWasPressed($event)" ng-model="restapi($http)" >
-     
-      		<nit-advanced-searchbox
-    			ng-model="searchParams"
-    			parameters="availableSearchParams"
-    			placeholder="ابحث٠٠٠"
-    			parametersLabel = "تحديد البحث في احد المجالات"
-     		>	 
-      		</nit-advanced-searchbox>  
-        
-
-    		<md-radio-group ng-model="domain"  class="md-primary"  layout="row" >
-			<md-radio-button ng-repeat="d in radioData" ng-style="{'display':'inline'}"   ng-value="d.value" ng-disabled=" d.isDisabled " >
-           	 		{{ d.label }}
-      	    </md-radio-button>
-    		</md-radio-group>
-			
-			<!--  __{{ domain }}			
-			{{searchParams}}
-     	   	{{keyflag}}
-     	   	<p>result:  </p>
-     	   	{{rest}}
-     	   	<p>error:  </p>
-			{{error}}
-			
-			{{item}}-->
-		 </div>	
-		 <div ng-include src="'views/results.html'"  >	
-			
-		 </div>		
-			
+      	 <div ng-include src="'views/main.html'"  >	</div>	
+		 <div ng-include src="'views/results.html'"  > </div>		
+		
 	</div>
 	
 	
 		
 	
     <div class="footer">
-    
+     <br> <br> <br>
     </div>
     
     
@@ -153,6 +127,7 @@
 	
 	<script src="/bower_components/angular-smart-table/dist/smart-table.min.js"></script>
 	
+
 	
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <!-- script src="scripts/app.js"></script -->

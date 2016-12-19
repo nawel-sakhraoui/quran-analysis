@@ -1,25 +1,34 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img-eng  src="images/qs.gif" > </img-eng> <br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
-  
-  
-</div>
+<div  ng-controller="MainCtrl" ng-keypress="checkIfEnterKeyWasPressed($event)" >
+     
+      		<nit-advanced-searchbox
+    			ng-model="searchParams"
+    			parameters="availableSearchParams"
+    			placeholder="ابحث٠٠٠"
+    			parametersLabel = "تحديد البحث في احد المجالات"
+     		>	 
+      		</nit-advanced-searchbox>  
+        
+			<span>تخصيص مجال البحث</span>
+    		<md-radio-group ng-model="domain"  class="md-primary"  layout="row"ng-change='domainchange(domain)' >
+			<md-radio-button ng-repeat="d in radioData" 
+							 ng-style="{'display':'inline'}" 
+							 ng-value="d.value" 
+							 ng-disabled="d.isDisabled" 
+							
+							 >
+					<span>
+           	 		{{ d.label }}
+           	 		</span>
+      	    </md-radio-button>
+    		</md-radio-group>
+			
+			<!--  __{{ domain }}			
+			{{searchParams}}
+     	   	{{keyflag}}
+     	   	<p>result:  </p>
+     	   	{{rest}}
+     	   	<p>error:  </p>
+			{{error}}
+			
+			{{item}}-->
+</div>	
