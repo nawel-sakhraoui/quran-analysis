@@ -138,7 +138,8 @@ def search_ayats():
   
         '''print surats 
         print time_citation  
-       مَٰمَٰ
+        '''
+        
         
         for w in allwords : 
             print w

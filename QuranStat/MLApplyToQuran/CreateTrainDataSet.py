@@ -30,7 +30,8 @@ surat_data =  parser.read_csv(surat_rep, sep=",", encoding="utf8")#, header= 0, 
                             
 #words
 unique_val_list  = []
-ayat_rep = parent_rep+"/data/ayat.csv"
+#ayat_rep = parent_rep+"/data/ayat.csv"
+ayat_rep = parent_rep+"/data/quran-uthmani.txt"
 size = 0 
 with open(ayat_rep ) as f:
     for line in f:
@@ -114,12 +115,12 @@ dataframe.to_csv( parent_rep+"/data/traindataset.csv", sep =",", encoding='utf-8
 
 #surat_set2 = pd.DataFrame("0", index = np.arange(size), columns = [ "مكان_النزول" , "ترتيب_التنزيل" ,"السورة" , "الترتيب"])
 compteur = 0 
-print data_set 
+print data_set.shape 
 
 for  c in np.arange(114) : 
     i = surat_data.iloc[[c]]  
     
-    print i 
+    #print i 
     
     ayat = 0
     for p in range(compteur, (int(i.ix[c][u"عدد_آياتها"])+compteur) ):
@@ -135,15 +136,15 @@ for  c in np.arange(114) :
         data_set.ix[p][u"مكان_النزول"] = i.ix[c][u"مكان_النزول"]
        
       
-        print ayat 
-        print data_set.ix[p][u"الترتيب"] 
+        #print ayat 
+        #print data_set.ix[p][u"الترتيب"] 
         ayat = ayat + 1
         
     
     compteur = int(i.ix[c][u"عدد_آياتها"])+compteur
     
 
-print data_set 
+print data_set.shape
 #dataframe2 = pd.concat([data_set, surat_set2], axis=1)
 #print dataframe2.shape
 print "saving dataset  outputs"

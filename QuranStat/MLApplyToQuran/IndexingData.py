@@ -30,7 +30,7 @@ surat_rep = parent_rep+"/data/surat.csv"
 surat_dict = []
 list_keys = []
 flag = True 
-"""
+
 with open(surat_rep ) as f:
     for line in f:
         if flag :
@@ -50,14 +50,14 @@ with open(surat_rep ) as f:
 #read data set 
 for i in range (len(surat_dict)) : 
     res = es.index(index="quran-index", doc_type='surats', id=i+1 , body=surat_dict[i])
-"""
+
 
 
 
 index_list = [  u"مكان_النزول", u"ترتيب_التنزيل" ,u"السورة" ,u"الآية",    u"الترتيب"  ]
 
 
-tachkil =   [u'ٍ'  ,u'ِ',  u'ْ', u'ٌ' , u'ُ' , u'ً' , u'َ', u'ّ', u'ؕ',u'َّ' , u'ِّ',  u'ُّ',  u'َؕ']
+tachkil =   [u'ٍ'  ,u'ِ',  u'ْ', u'ٌ' , u'ُ' , u'ً' , u'َ', u'ّ', u'ٰ',u'َّ' , u'ِّ',  u'ُّ',  u'ٰ']
 #hurufatf = [u"و", u"ف", u"ثم", u"حتى", u"أو", u"أم", u"بل", u"لا", u"لكن", u"أ", u"ب", u"ل", u"ال"]
 hamza = [ u"أ", u"إ", u"آ", u"ٱ" ]
 #tachkil = tachkil+ hurufatf 
@@ -151,13 +151,13 @@ with open(dataset_rep ) as f:
                     print c
                     print c2 '''
                     
-            '''
-            print ix 
+            
+            
             #print temp_dict 
             res = es.index(index="quran-index", doc_type='ayats', id= ix,  body=  temp_dict)
             ix +=1 
             
-            ''' 
+            
   
 print  len (tachkil_dict.keys()) 
 """

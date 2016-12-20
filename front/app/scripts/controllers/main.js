@@ -246,20 +246,7 @@ app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie) {
 	$scope.select = trie ; 
 	// $rootScope.rest2.list_surats["الآية"].sort();
 	
-	
-	
-	$scope.inngrams = function f (key, list){
-		flag = false ;
-		for(var p in list ){
-			
-			if (p===key ){
-				flag =  true ; 
-			}
-		}
-		return flag ;
-		
-		
-	};
+
 });
 
 
