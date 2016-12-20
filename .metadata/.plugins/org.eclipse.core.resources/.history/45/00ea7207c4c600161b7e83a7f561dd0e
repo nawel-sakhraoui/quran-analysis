@@ -31,7 +31,7 @@ surat_data =  parser.read_csv(surat_rep, sep=",", encoding="utf8")#, header= 0, 
 #words
 unique_val_list  = []
 #ayat_rep = parent_rep+"/data/ayat.csv"
-ayat_rep = parent_rep+"/data/quran-simple-min.txt"
+ayat_rep = parent_rep+"/data/quran-uthmani.txt"
 size = 0 
 with open(ayat_rep ) as f:
     for line in f:
