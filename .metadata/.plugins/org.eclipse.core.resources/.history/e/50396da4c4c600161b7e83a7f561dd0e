@@ -11,7 +11,7 @@
     "angular-sanitize": "^1.4.0",
     "angular-touch": "^1.4.0",
     "image-engine-angular": "^1.0.1",
-    "elasticsearch": "^12.1.0",
+    "elasticsearch": "^12.1.0"
     "angular-material": "^1.1.1" , 
     "angular-smart-table": "^2.1.8" , 
     "angular-advanced-searchbox":"^3.0.0"
