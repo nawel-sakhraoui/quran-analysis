@@ -138,8 +138,7 @@ def search_ayats():
   
         '''print surats 
         print time_citation  
-       مَٰمَٰ
-        
+        '''
         for w in allwords : 
             print w
         return  json.dumps( {"time_citation":time_citation  , "makia": makia, "madania": madania, "list_surats": surats, "data": allwords }, ensure_ascii=False);   #json.dumps(allwords, ensure_ascii=False) ;
