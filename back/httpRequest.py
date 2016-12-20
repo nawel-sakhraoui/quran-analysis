@@ -167,7 +167,12 @@ def search_ayats():
             allwords += res[u"hits"][u"hits"]#[:][u"_source"]  
               
             
-       
+        '''for p in allwords :
+            print p 
+            for q in p[u"_source"]: 
+                print q, p[u"_source"][q]'''
+                
+                      
         unique_word =  dict()
         
         makia = 0 
@@ -225,9 +230,9 @@ def search_ayats():
        
         
             j+=1
-            for w in allwords : 
+            '''for w in allwords : 
                 print w[u"_source"]#الرَّحْمَٰنُ
-                
+            '''    
                 
         import operator
         unique_word = sorted (unique_word.items() , key=operator.itemgetter(1), reverse=True )

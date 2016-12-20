@@ -1,6 +1,6 @@
 <div  ng-controller="ResultCtrl" >
 	<div   ng-show= "!show">
-	<br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</div>
 
    <div   ng-show= "show">
@@ -15,7 +15,7 @@
             </md-checkbox>
           
       		<br>
-           <md-checkbox class ="green"  ng-checked="exists(item, selected)" ng-repeat="item in rest" ng-click="toggle(item, selected)" ng-style="{'display':'inline'}"  >
+           <md-checkbox class ="green"  ng-checked="exists(item, selected)" ng-repeat="item in rest" ng-click="toggle(item, selected)" ng-style="{'display':'inline-block'}"  >
                {{ item }}
            </md-checkbox>
       

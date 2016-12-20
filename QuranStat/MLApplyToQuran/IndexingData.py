@@ -114,10 +114,10 @@ with open(dataset_rep ) as f:
                              d3 = d2.replace(h, u"ا") 
                     
                     
-                    if not  c in index_list :
-                        '''    temp_dict.update( {  c : d  } )
+                    if  c in index_list :
+                        temp_dict.update( {  c : d  } )
  
-                        try: 
+                        """try: 
                             int(d)
                             pass 
                         except :
@@ -130,20 +130,20 @@ with open(dataset_rep ) as f:
                         
                             if d3 !=d2 and d3 not in tachkil_dict : 
                                 tachkil_dict[d2].append (d3)                        
-                            pass 
+                            pass """
                         
-                        else : '''
+                    else :
                       
                         temp_dict.update( { d : c } )
                 
-                        if c2 in tachkil_dict.keys(): 
+                        """if c2 in tachkil_dict.keys(): 
                             if c not in tachkil_dict[c2] :
                                 tachkil_dict[c2].append( c )
                         else : 
                             tachkil_dict.update({c2: [c]})
                           
                         if c3 !=c2  and  c3 not in  tachkil_dict : 
-                                tachkil_dict[c2].append (c3) 
+                                tachkil_dict[c2].append (c3)""" 
                                 
                     '''print "______________"
                     print d
@@ -183,7 +183,7 @@ mapping ='''{
     "number_of_replicas": 0
   }
 }'''
-       
+'''     
 res = es.indices.create(index='words-index', body=mapping )    
     
 
@@ -197,5 +197,7 @@ for p in tachkil_dict.keys() :
     tachkil_dict[p].append(p)
     res = es.index(index="words-index", doc_type='words',id = ix,  body= {ix:tachkil_dict[p]})
     ix+=1  
+    
+'''
 print "done" 
        

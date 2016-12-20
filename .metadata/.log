@@ -2810,3 +2810,142 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.core.resources 2 10035 2016-12-18 10:01:46.652
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.python.pydev.shared_core 4 4 2016-12-20 13:52:13.492
+!MESSAGE ERROR reading shell.
+ProcessInfo:
+
+ - Executed: /usr/bin/python -u /home/nawel/.p2/pool/plugins/org.python.pydev_5.3.1.201610311318/pysrc/pycompletionserver.py 45313
+
+ - Environment:
+CLUTTER_IM_MODULE=xim
+COMPIZ_BIN_PATH=/usr/bin/
+COMPIZ_CONFIG_PROFILE=ubuntu
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-Qs9EC4WVPK
+DEFAULTS_PATH=/usr/share/gconf/ubuntu.default.path
+DESKTOP_SESSION=ubuntu
+DISPLAY=:0
+GDK_CORE_DEVICE_EVENTS=1
+GDK_SCALE=1
+GDMSESSION=ubuntu
+GDM_LANG=fr_FR
+GIO_LAUNCHED_DESKTOP_FILE=/home/nawel/.local/share/applications/eclipse.desktop
+GIO_LAUNCHED_DESKTOP_FILE_PID=3469
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GNOME_KEYRING_CONTROL=
+GNOME_KEYRING_PID=
+GPG_AGENT_INFO=/home/nawel/.gnupg/S.gpg-agent:0:1
+GTK2_MODULES=overlay-scrollbar
+GTK_IM_MODULE=ibus
+GTK_MODULES=gail:atk-bridge:unity-gtk-module
+HOME=/home/nawel
+IM_CONFIG_PHASE=1
+INSTANCE=
+JAVA_HOME=/opt/java
+JOB=unity-settings-daemon
+LANG=fr_FR.UTF-8
+LANGUAGE=fr_FR
+LC_ADDRESS=ar_DZ.UTF-8
+LC_IDENTIFICATION=ar_DZ.UTF-8
+LC_MEASUREMENT=ar_DZ.UTF-8
+LC_MONETARY=ar_DZ.UTF-8
+LC_NAME=ar_DZ.UTF-8
+LC_NUMERIC=ar_DZ.UTF-8
+LC_PAPER=ar_DZ.UTF-8
+LC_TELEPHONE=ar_DZ.UTF-8
+LC_TIME=ar_DZ.UTF-8
+LIBOVERLAY_SCROLLBAR=0
+LOGNAME=nawel
+MANDATORY_PATH=/usr/share/gconf/ubuntu.mandatory.path
+NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+NODE_HOME=/opt/node
+OXYGEN_DISABLE_INNER_SHADOWS_HACK=1
+PATH=/opt/elasticsearch/bin:/opt/node/bin:/opt/java/bin:/home/nawel/bin:/home/nawel/.local/bin:/opt/elasticsearch/bin:/opt/java:/opt/node:/opt/eclipse/java-neon/eclipse:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PWD=/home/nawel
+PYTHONPATH=/home/nawel/.p2/pool/plugins/org.python.pydev_5.3.1.201610311318/pysrc/pydev_sitecustomize:/usr/lib/python2.7:/usr/lib/python2.7/plat-x86_64-linux-gnu:/usr/lib/python2.7/lib-tk:/usr/lib/python2.7/lib-dynload:/usr/local/lib/python2.7/dist-packages:/usr/local/lib/python2.7/dist-packages/setuptools-28.7.1-py2.7.egg:/usr/lib/python2.7/dist-packages:/usr/lib/python2.7/dist-packages/gtk-2.0
+QT4_IM_MODULE=xim
+QT_ACCESSIBILITY=1
+QT_IM_MODULE=ibus
+QT_LINUX_ACCESSIBILITY_ALWAYS_ON=1
+QT_QPA_PLATFORMTHEME=appmenu-qt5
+SESSION=ubuntu
+SESSIONTYPE=gnome-session
+SHELL=/bin/bash
+SHLVL=0
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+UPSTART_EVENTS=xsession started
+UPSTART_INSTANCE=
+UPSTART_JOB=unity7
+UPSTART_SESSION=unix:abstract=/com/ubuntu/upstart-session/1000/1047
+USER=nawel
+XAUTHORITY=/home/nawel/.Xauthority
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg
+XDG_CURRENT_DESKTOP=Unity
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/nawel
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_SEAT=seat0
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+XDG_SESSION_DESKTOP=ubuntu
+XDG_SESSION_ID=c1
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+XDG_SESSION_TYPE=x11
+XDG_VTNR=7
+XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+XMODIFIERS=@im=ibus
+
+ - Working Dir:
+/opt/eclipse/java-neon/eclipse/../../../../home/nawel/.p2/pool/plugins/org.python.pydev_5.3.1.201610311318/pysrc
+
+ - OS:
+Linux
+
+ - Std output:
+pycompletionserver exception occurred
+pycompletionserver received error: Traceback (most recent call last):
+  File "/home/nawel/.p2/pool/plugins/org.python.pydev_5.3.1.201610311318/pysrc/pycompletionserver.py", line 294, in run
+    defFile, comps = _pydev_imports_tipper.generate_tip(data, log)
+  File "/home/nawel/.p2/pool/plugins/org.python.pydev_5.3.1.201610311318/pysrc/_pydev_bundle/_pydev_imports_tipper.py", line 132, in generate_tip
+    f, mod, parent, foundAs = Find(data, log)
+  File "/home/nawel/.p2/pool/plugins/org.python.pydev_5.3.1.201610311318/pysrc/_pydev_bundle/_pydev_imports_tipper.py", line 97, in Find
+    mod = getattr(mod, comp)
+AttributeError: 'module' object has no attribute 'index'
+
+
+
+ - Err output:
+
+!STACK 0
+java.nio.channels.ClosedByInterruptException
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at sun.nio.ch.SocketChannelImpl.poll(SocketChannelImpl.java:957)
+	at sun.nio.ch.SocketAdaptor$SocketInputStream.read(SocketAdaptor.java:204)
+	at sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:103)
+	at java.io.InputStream.read(InputStream.java:101)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.read(AbstractShell.java:454)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.read(AbstractShell.java:506)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.writeAndGetResults(AbstractShell.java:692)
+	at org.python.pydev.editor.codecompletion.shell.AbstractShell.getImportCompletions(AbstractShell.java:756)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.createInnerFromServer(CompiledModule.java:342)
+	at org.python.pydev.editor.codecompletion.revisited.modules.CompiledModule.getGlobalTokens(CompiledModule.java:542)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.internalGenerateGetCompletionsForModule(AbstractASTManager.java:750)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:575)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:544)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:535)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:525)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.internalGenerateGetCompletionsForModule(AbstractASTManager.java:758)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:575)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:544)
+	at org.python.pydev.editor.codecompletion.revisited.AbstractASTManager.getCompletionsForModule(AbstractASTManager.java:535)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findGlobalTokDef(SourceModule.java:1034)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinitionsFromModAndTok(SourceModule.java:983)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:965)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:678)
+	at org.python.pydev.editor.codecompletion.revisited.modules.SourceModule.findDefinition(SourceModule.java:1)
+	at org.python.pydev.editor.refactoring.PyRefactoringFindDefinition.findActualDefinition(PyRefactoringFindDefinition.java:182)
+	at org.python.pydev.editor.refactoring.PyRefactoringFindDefinition.findActualDefinition(PyRefactoringFindDefinition.java:81)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getDocstringHover(PyDocstringTextHover.java:100)
+	at org.python.pydev.editor.hover.PyDocstringTextHover.getHoverInfo(PyDocstringTextHover.java:58)
+	at org.python.pydev.editor.hover.PydevCombiningHover.getHoverInfo(PydevCombiningHover.java:152)
+	at org.python.pydev.editor.hover.PyEditorTextHoverProxy.getHoverInfo(PyEditorTextHoverProxy.java:59)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:167)
