@@ -1,6 +1,1 @@
 INDEX VERSION 1.3+/home/nawel/quranstat/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-1720810241.index
-3060370662.index
-2261442871.index
-2651556732.index
-3775146249.index

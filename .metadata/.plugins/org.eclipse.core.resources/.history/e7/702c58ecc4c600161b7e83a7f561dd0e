@@ -161,7 +161,7 @@ with open(dataset_rep ) as f:
   
 print  len (tachkil_dict.keys()) 
    
-        
+"""          
 mapping ='''{
 "settings": {
     "index.mapping.total_fields.limit": 100000,
@@ -185,5 +185,5 @@ for p in tachkil_dict.keys() :
     ix+=1  
     
 
-print "done"
+print "done" 
        
