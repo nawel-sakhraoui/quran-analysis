@@ -17,7 +17,7 @@ domains = [u"بحث عام" , u"الكلمات المتقاربة"]
 index2 = "words-index"
 index = "quran-index"
 tachkil =   [u'ٍ'  ,u'ِ',  u'ْ', u'ٌ' , u'ُ' , u'ً' , u'َ', u'ّ']
-huruf = [ u"ال", u"و", u"ف", u"ب" , u"ك", u"لل", u"ل", u"ا", u"اف", u"وال", u"فال", u"بال", u'كال', u"تال", u"وَ", u"تالو"]
+huruf = [ u"ال", u"و", u"ف", u"ب" , u"ك", u"لل", u"ل", u"ا", u"اف", u"وال", u"فال", u"بال", u'كال', u"تال", u"وَ", u"تال"]
 
 @app.route('/words', methods=['POST'])
 def search_words():
@@ -141,13 +141,13 @@ def search_ayats():
         '''
         
         
-        for w in allwords : 
-            print w
+        #for w in allwords : 
+            #print w
         return  json.dumps( {"time_citation":time_citation  , "makia": makia, "madania": madania, "list_surats": surats, "data": allwords }, ensure_ascii=False);   #json.dumps(allwords, ensure_ascii=False) ;
 
     if  post[u"domain"] == domains[1] :
         
-        print post[u"domain"]
+        #print post[u"domain"]
         for word in post[u"query"] : 
             w_body = {u"size" : 7000,    u"query": {
                 
@@ -165,7 +165,7 @@ def search_ayats():
             
         
             allwords += res[u"hits"][u"hits"]#[:][u"_source"]  
-              
+            time_citation += len( res[u"hits"][u"hits"])
             
         '''for p in allwords :
             print p 

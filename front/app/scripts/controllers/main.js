@@ -86,8 +86,8 @@ app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope, $t
 		$scope.radioData = [
 		      { label: 'بحث عام', value: "بحث عام" },
 		      { label: 'الكلمات المتقاربة', value: "الكلمات المتقاربة" },
-		      { label: '3', value: "3", isDisabled: true },
-		      { label: '4', value: "4", isDisabled: true }
+		     // { label: '3', value: "3", isDisabled: true },
+		     // { label: '4', value: "4", isDisabled: true }
 		 ];
 		
 		

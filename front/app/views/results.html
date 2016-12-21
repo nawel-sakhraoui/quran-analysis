@@ -10,12 +10,13 @@
             			 aria-label="Select All"
                          ng-checked="isChecked()"
                          md-indeterminate="isIndeterminate()"
-                         ng-click="toggleAll()">
+                         ng-click="toggleAll()"
+                         >
               			إختَرالكلّ
             </md-checkbox>
           
       		<br>
-           <md-checkbox class ="green"  ng-checked="exists(item, selected)" ng-repeat="item in rest" ng-click="toggle(item, selected)" ng-style="{'display':'inline-block'}"  >
+           <md-checkbox class ="green" ng-checked="exists(item, selected)" ng-repeat="item in rest" ng-click="toggle(item, selected)" ng-style="{'display':'inline-block'}"   >
                {{ item }}
            </md-checkbox>
       
@@ -26,7 +27,7 @@
 		<table  class="table table-striped" ng-show="show3 && show2 " >
 		
 		  <thead align="center">
-			<tr>
+			<tr  md-colors="{background: 'teal'}">
 				<th></th>
 				<th>تكرار الذّكر</th>
 				<th>نسبة الذّكر</th>
@@ -37,7 +38,7 @@
 		 </thead>  
 		
 		  <tbody align="center">
-			<tr >
+			<tr  md-colors="{background: 'teal-100'}">
 				<td> <b>{{selected.join(", ")}} </b></td>
 				<td>  {{rest2.time_citation}} </td>
 				<td>  %{{(rest2.time_citation/77439).toFixed(5)}} </td>
@@ -53,10 +54,10 @@
 		 <div    ng-show="show3"  ng-if="domain=='بحث عام'">
 		<md-list   ng-show="show3 && show2"  ng-init="limit = 5 ">
 		
-		<md-subheader ng-click="isHidden2=!isHidden2"    ><h4 > قائمة السّور </h4 >  </md-subheader>
+		<md-subheader ng-click="isHidden2=!isHidden2"   md-colors="{background: 'teal'} "><h4 > قائمة السّور </h4 >  </md-subheader>
 		
 		 
-		<md-list-item  ng-show="!isHidden2" ng-repeat="item in rest2.list_surats "  layout="row" >
+		<md-list-item  ng-show="!isHidden2" ng-repeat="item in rest2.list_surats "  layout="row"   md-colors="{background: 'teal-50'}">
           	<div    ng-click="isHidden1=!isHidden1"  
           	 title='السورة ({{item["الترتيب"]}}), {{item["مكان_النزول"]}}, التنزيل({{item["ترتيب_التنزيل"]}})'
           	
@@ -105,9 +106,9 @@
 	<div    ng-show="show3"  ng-if="domain=='الكلمات المتقاربة'">
 	 	<md-list   ng-show="show3 && show2" >
 		
-		 <md-subheader ng-click="isHidden2=!isHidden2"    ><h4 > قائمةالكلمات </h4 >  </md-subheader>
+		 <md-subheader ng-click="isHidden2=!isHidden2"  md-colors="{background: 'teal'}"  ><h4 > قائمةالكلمات </h4 >  </md-subheader>
 		
-			<md-list-item  ng-show="!isHidden2" ng-repeat="key in rest2.ngram "  >	
+			<md-list-item  ng-show="!isHidden2" ng-repeat="key in rest2.ngram "  md-colors="{background: 'teal-50'}">	
 			
 					
 					<h5  ng-click="isHidden3=!isHidden3" ng-show="!isHidden3" ><b> {{ key[0]  }} </b> ({{ key[1]  }})</h5>
