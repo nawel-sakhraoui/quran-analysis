@@ -42,7 +42,7 @@ app.factory('elastic_word', ["$http",  function ($http ){
 				{
 			
 				method: "POST" ,
-				url: "http://0.0.0.0:5000/words",
+				url: "http://35.166.146.72:5000/words",
 				//url : "http://127.0.0.1:9200/quran-index/ayats/_search?q="+"الفِيل" ,
 				//params :{"query":{"match_all":{}}},
 				data:  { query , "domain" : domain },// {"query":{"term":{"السورة":"الفِيل"}}},
@@ -60,7 +60,7 @@ app.factory('elastic_ayat', ["$http",  function ($http ){
 				{
 			
 				method: "POST" ,
-				url: "http://0.0.0.0:5000/ayats",
+				url: "http://35.166.146.72:5000/ayats",
 				//url : "http://127.0.0.1:9200/quran-index/ayats/_search?q="+"الفِيل" ,
 				//params :{"query":{"match_all":{}}},
 				data:  { query , "domain" : domain },// {"query":{"term":{"السورة":"الفِيل"}}},
