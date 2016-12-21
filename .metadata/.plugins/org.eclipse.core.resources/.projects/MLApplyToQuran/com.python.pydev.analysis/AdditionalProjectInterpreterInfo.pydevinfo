@@ -1,8 +1,8 @@
 -- VERSION_4
 -- START DISKCACHE_2
 /home/nawel/quranstat/.metadata/.plugins/org.eclipse.core.resources/.projects/MLApplyToQuran/com.python.pydev.analysis/v2_indexcache
-IndexingData|1481214766000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/IndexingData.py
-CreateTrainDataSet|1479313693000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/CreateTrainDataSet.py
+IndexingData|1482245976000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/IndexingData.py
+CreateTrainDataSet|1482245592000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/CreateTrainDataSet.py
 Knn|1478187819000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/Knn.py
 sentencengrams|1478187616000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/sentencengrams.py
 DeepBolzmanMachine|1478187704000000000|/home/nawel/quranstat/QuranStat/MLApplyToQuran/DeepBolzmanMachine.py
@@ -45,7 +45,7 @@ res|1|res!27@
 siz|1|size!19@
 sur|4|surat_dict!27@surat_rep!27@surat_rep!19@surat_data!19@
 tac|2|tachkil_dict!27@tachkil!27@
-tem|1|temp_dict!27@
+tem|2|temp_f!27@temp_dict!27@
 uni|1|unique_val_list!19@
 wor|1|word!19@
 -- END TREE

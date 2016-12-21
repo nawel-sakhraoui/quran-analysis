@@ -26,7 +26,7 @@
 		<table  class="table table-striped" ng-show="show3 && show2 " >
 		
 		  <thead align="center">
-			<tr>
+			<tr >
 				<th></th>
 				<th>تكرار الذّكر</th>
 				<th>نسبة الذّكر</th>
@@ -56,7 +56,7 @@
 		<md-subheader ng-click="isHidden2=!isHidden2"    ><h4 > قائمة السّور </h4 >  </md-subheader>
 		
 		 
-		<md-list-item  ng-show="!isHidden2" ng-repeat="item in rest2.list_surats "  layout="row" >
+		<md-list-item  ng-show="!isHidden2" ng-repeat="item in rest2.list_surats " >
           	<div    ng-click="isHidden1=!isHidden1"  
           	 title='السورة ({{item["الترتيب"]}}), {{item["مكان_النزول"]}}, التنزيل({{item["ترتيب_التنزيل"]}})'
           	
@@ -66,7 +66,7 @@
             	<p ng-show="!isHidden1" >( {{item["الآية"].length==1 ?"-الآية-":  "الآيات" }} {{item["الآية"].length}}) </p>
             </div>
             	
-           <div ng-show="isHidden1" >
+           <div ng-show="!isHidden1" >
           	<table class="table table-striped " st-table="rest2.data"  ng-show="isHidden1"  >
 		
 		 	 	<thead align="right">

@@ -1,8 +1,5 @@
 
 
-body {
-  padding: 0;
-}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 

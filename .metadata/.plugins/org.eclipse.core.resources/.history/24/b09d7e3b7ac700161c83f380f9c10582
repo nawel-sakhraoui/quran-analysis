@@ -84,6 +84,14 @@ md-checkbox.md-checked.green .md-icon {
   margin-bottom: 0; }
   
   
+.red {
+    color: red; 
+}
+
+.black {
+    color: black;
+}
+
 
 
 

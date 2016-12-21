@@ -1,4 +1,9 @@
-
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
 
 body {
   padding: 0;
@@ -60,6 +65,7 @@ body {
 
   /* Remove the padding we set earlier */
   .header,
+  .marketing,
   .footer {
     padding-left: 0;
     padding-right: 0;
@@ -82,8 +88,7 @@ md-checkbox.md-checked.green .md-icon {
 .listdemoBasicUsage md-divider {
   margin-top: 10px;
   margin-bottom: 0; }
-  
-  
+
 
 
 
