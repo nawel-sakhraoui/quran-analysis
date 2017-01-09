@@ -1,17 +1,21 @@
 #/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import json 
-from flask.ext.cors import CORS
+#from flask.ext.cors import CORS
+from flask_cors import CORS, cross_origin
+from flask import Response
 
 from datetime import datetime
 from elasticsearch import Elasticsearch
 import demjson
 
+#from flask.ext.jsonpify import jsonify
+
 app = Flask(__name__)
 CORS(app)
-es = Elasticsearch() 
+es = Elasticsearch(['http://localhost:9200'], timeout=30) 
 
 domains = [u"بحث عام" , u"الكلمات المتقاربة"]
 index2 = "words-index"
@@ -19,12 +23,13 @@ index = "quran-index"
 tachkil =   [u'ٍ'  ,u'ِ',  u'ْ', u'ٌ' , u'ُ' , u'ً' , u'َ', u'ّ']
 huruf = [ u"ال", u"و", u"ف", u"ب" , u"ك", u"لل", u"ل", u"ا", u"اف", u"وال", u"فال", u"بال", u'كال', u"تال", u"وَ", u"تال"]
 
-@app.route('/words', methods=['POST'])
+@app.route('/words', methods=['POST'] )
 def search_words():
     print request.form
     new_words = []
     post =  demjson.decode(list(request.form)[0])
-    print post[u"domain"]
+    #print post[u"domain"]
+    print es 
     if  True : #post[u"domain"] == domains[0] : 
         
         if post[u"query"][u"query"]  != u"":
@@ -47,10 +52,12 @@ def search_words():
             new_words = list(set (search_word_with_val(allwords, es )+allwords))     
             new_words = [ w for w in new_words if [t for t in tachkil if t in w  ] != [] ]
 
+	#for w in new_words :
+	#	print w 
             
-        return json.dumps(new_words, ensure_ascii=False) ;
-    
-     
+    	p=  json.dumps(new_words, ensure_ascii=False)
+    	#print p 
+	return  p#jsonify (new_words) 
      
      
    
@@ -248,8 +255,13 @@ def search_ayats():
         return  json.dumps( {"ngram":unique_word,"time_citation":time_citation  , "makia": makia, "madania": madania, "list_surats": surats, "data": allwords }, ensure_ascii=False);   #json.dumps(allwords, ensure_ascii=False) ;
 
         
-
+'''
+@app.after_request
+def apply_caching(response):
+    response.headers['Access-Control-Allow-Origin'] = "*"
+    return response
+'''
        
 if __name__ == '__main__':
     
-    app.run(port="5000", host='0.0.0.0')
+    app.run(port="5001", host='0.0.0.0')

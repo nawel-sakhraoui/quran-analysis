@@ -42,7 +42,7 @@ app.factory('elastic_word', ["$http",  function ($http ){
 				{
 			
 				method: "POST" ,
-				url: "http://35.166.146.72:5000/words",
+				url: "http://35.167.29.71:5001/words",
 				//url : "http://127.0.0.1:9200/quran-index/ayats/_search?q="+"الفِيل" ,
 				//params :{"query":{"match_all":{}}},
 				data:  { query , "domain" : domain },// {"query":{"term":{"السورة":"الفِيل"}}},
@@ -60,7 +60,7 @@ app.factory('elastic_ayat', ["$http",  function ($http ){
 				{
 			
 				method: "POST" ,
-				url: "http://35.166.146.72:5000/ayats",
+				url: "http://35.167.29.71:5001/ayats",
 				//url : "http://127.0.0.1:9200/quran-index/ayats/_search?q="+"الفِيل" ,
 				//params :{"query":{"match_all":{}}},
 				data:  { query , "domain" : domain },// {"query":{"term":{"السورة":"الفِيل"}}},
@@ -106,16 +106,19 @@ app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope, $t
 		 		{
 
 		    	elastic_word.search ($scope.searchParams, $rootScope.domain)
-		    	.success(function (data) {
-		    		$rootScope.rest  = data  ;
-	               
-	            })
-	            .error(function (error) {
-	            	$scope.error = error; 
-	            });
+		    	.then(function (data) {
+		
+		   		$rootScope.rest  = data.data
+
+		 	               
+	            	})
+	            	.error(function (error) {
+	            		$scope.error = error; 
+	           	 });
 		    	
-		 		}
+		 	}
 		    	}, 2000);
+			 
 		    }
 	 	};
 	 	
@@ -133,14 +136,14 @@ app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope, $t
 			{
 	 			
 	 		elastic_word.search($scope.searchParams, dom)
-	 		.success(function (data) {
-	 			$rootScope.rest  = data  ; 
-            })
-            .error(function (error) {
-            	$scope.error = error ;
-            });
+	 		.then(function (data) {
+	 			$rootScope.rest  = data.data  ; 
+            		})
+            		.error(function (error) {
+            			$scope.error = error ;
+            		});
 	 		}
-	 		}, 1000);
+	 		}, 2000);
 	 		
 	 	};
 	 	
@@ -221,8 +224,8 @@ app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie) {
  		{
  			$rootScope.show2 = true;
  		elastic_ayat.search($rootScope.selected, $rootScope.domain)
- 		.success(function (data) {
- 			$rootScope.rest2  = data  ; 
+ 		.then(function (data) {
+ 			$rootScope.rest2  = data.data  ; 
         })
         .error(function (error) {
         	$scope.error2 = error ;

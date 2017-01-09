@@ -48,8 +48,8 @@ with open(surat_rep ) as f:
        
 #put surat_dict in elasticsearch  
 #read data set 
-for i in range (len(surat_dict)) : 
-    res = es.index(index="quran-index", doc_type='surats', id=i+1 , body=surat_dict[i])
+#for i in range (len(surat_dict)) : 
+#    #res = es.index(index="quran-index", doc_type='surats', id=i+1 , body=surat_dict[i])
 
 
 
@@ -154,7 +154,7 @@ with open(dataset_rep ) as f:
             
             
             #print temp_dict 
-            res = es.index(index="quran-index", doc_type='ayats', id= ix,  body=  temp_dict)
+            #res = es.index(index="quran-index", doc_type='ayats', id= ix,  body=  temp_dict)
             ix +=1 
             
             
@@ -181,9 +181,9 @@ for p in tachkil_dict.keys() :
     #for i in tachkil_dict[p]:
     #    print i 
     tachkil_dict[p].append(p)
-    res = es.index(index="words-index", doc_type='words',id = ix,  body= {ix:tachkil_dict[p]})
+    res = es.index(index="words-index", doc_type='words',id = ix,  body= {ix:tachkil_dict[p]}, request_timeout=60)
     ix+=1  
     
 
 print "done"
-       
+      

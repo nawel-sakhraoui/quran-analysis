@@ -1,0 +1,347 @@
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+    
+    [4mRunning "copy:styles" (copy) task[24m
+    Copied 1 file
+    
+    [32mDone, without errors.[39m
+    
+    
+    Execution Time (2017-01-08 11:05:42 UTC-0)
+    loading tasks               244ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 84%
+    loading grunt-contrib-copy   22ms  ▇▇▇ 8%
+    copy:styles                  23ms  ▇▇▇ 8%
+    Total 290ms
+    
+[4mRunning "postcss:server" (postcss) task[24m
+[32m>> [39m1 processed stylesheet created.
+
+[4mRunning "connect:livereload" (connect) task[24m
+Started connect web server on http://0.0.0.0:80
+
+[4mRunning "watch" task[24m
+Waiting...
+[32m>> [39mFile "app/scripts/controllers/main.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/controllers/main.js
+  line 111  col 43  Missing semicolon.
+
+  ⚠  1 warning
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2017-01-08 11:07:27 UTC-0)
+loading tasks                 241ms  ▇▇▇▇▇▇▇▇▇▇▇▇ 35%
+loading grunt-newer            45ms  ▇▇▇ 6%
+newer:jshint:all               15ms  ▇ 2%
+loading grunt-contrib-jshint  178ms  ▇▇▇▇▇▇▇▇▇ 26%
+jshint:all                    215ms  ▇▇▇▇▇▇▇▇▇▇ 31%
+Total 694ms
+
+[36mCompleted in 1.110s at Sun Jan 08 2017 11:07:28 GMT+0000 (UTC)[39m - Waiting...
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+    
+    [4mRunning "copy:styles" (copy) task[24m
+    Copied 1 file
+    
+    [32mDone, without errors.[39m
+    
+    
+    Execution Time (2017-01-08 11:07:40 UTC-0)
+    loading tasks               245ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 84%
+    loading grunt-contrib-copy   22ms  ▇▇▇ 8%
+    copy:styles                  23ms  ▇▇▇ 8%
+    Total 291ms
+    
+[4mRunning "postcss:server" (postcss) task[24m
+[32m>> [39m1 processed stylesheet created.
+
+[4mRunning "connect:livereload" (connect) task[24m
+Started connect web server on http://0.0.0.0:80
+
+[4mRunning "watch" task[24m
+Waiting...
+[32m>> [39mFile "app/scripts/controllers/main.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/controllers/main.js
+  line 111  col 43  Missing semicolon.
+
+  ⚠  1 warning
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2017-01-08 11:19:28 UTC-0)
+loading tasks                 282ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇ 38%
+loading grunt-newer            48ms  ▇▇▇ 6%
+newer:jshint:all               15ms  ▇ 2%
+loading grunt-contrib-jshint  179ms  ▇▇▇▇▇▇▇▇ 24%
+jshint:all                    219ms  ▇▇▇▇▇▇▇▇▇▇ 29%
+Total 744ms
+
+[36mCompleted in 1.214s at Sun Jan 08 2017 11:19:29 GMT+0000 (UTC)[39m - Waiting...
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+    
+    [4mRunning "copy:styles" (copy) task[24m
+    Copied 1 file
+    
+    [32mDone, without errors.[39m
+    
+    
+    Execution Time (2017-01-08 11:19:41 UTC-0)
+    loading tasks               245ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 84%
+    loading grunt-contrib-copy   25ms  ▇▇▇ 9%
+    copy:styles                  22ms  ▇▇▇ 8%
+    Total 293ms
+    
+[4mRunning "postcss:server" (postcss) task[24m
+[32m>> [39m1 processed stylesheet created.
+
+[4mRunning "connect:livereload" (connect) task[24m
+Started connect web server on http://0.0.0.0:80
+
+[4mRunning "watch" task[24m
+Waiting...
+[32m>> [39mFile "app/views/main.html" changed.
+[36mCompleted in 0.001s at Sun Jan 08 2017 11:42:45 GMT+0000 (UTC)[39m - Waiting...
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+    
+    [4mRunning "copy:styles" (copy) task[24m
+    Copied 1 file
+    
+    [32mDone, without errors.[39m
+    
+    
+    Execution Time (2017-01-08 11:43:03 UTC-0)
+    loading tasks               243ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 83%
+    loading grunt-contrib-copy   25ms  ▇▇▇ 9%
+    copy:styles                  23ms  ▇▇▇ 8%
+    Total 292ms
+    
+[4mRunning "postcss:server" (postcss) task[24m
+[32m>> [39m1 processed stylesheet created.
+
+[4mRunning "connect:livereload" (connect) task[24m
+Started connect web server on http://0.0.0.0:80
+
+[4mRunning "watch" task[24m
+Waiting...
+[32m>> [39mFile "app/scripts/controllers/main.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/controllers/main.js
+  line 111  col 48  Missing semicolon.
+
+  ⚠  1 warning
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2017-01-08 11:46:25 UTC-0)
+loading tasks                 264ms  ▇▇▇▇▇▇▇▇▇▇▇ 34%
+loading grunt-newer            49ms  ▇▇ 6%
+newer:jshint:all               23ms  ▇ 3%
+loading grunt-contrib-jshint  203ms  ▇▇▇▇▇▇▇▇▇ 26%
+jshint:all                    248ms  ▇▇▇▇▇▇▇▇▇▇▇ 31%
+Total 788ms
+
+[36mCompleted in 1.235s at Sun Jan 08 2017 11:46:26 GMT+0000 (UTC)[39m - Waiting...
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+    
+    [4mRunning "copy:styles" (copy) task[24m
+    Copied 1 file
+    
+    [32mDone, without errors.[39m
+    
+    
+    Execution Time (2017-01-08 11:46:39 UTC-0)
+    loading tasks               242ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 83%
+    loading grunt-contrib-copy   25ms  ▇▇▇ 9%
+    copy:styles                  23ms  ▇▇▇ 8%
+    Total 291ms
+    
+[4mRunning "postcss:server" (postcss) task[24m
+[32m>> [39m1 processed stylesheet created.
+
+[4mRunning "connect:livereload" (connect) task[24m
+Started connect web server on http://0.0.0.0:80
+
+[4mRunning "watch" task[24m
+Waiting...
+TypeError: Cannot read property 'split' of undefined
+    at Object.livereload [as handle] (/home/ubuntu/quran-analysis/front/node_modules/connect-livereload/index.js:91:48)
+    at next (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:174:15)
+    at Function.app.handle (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:182:3)
+    at Server.app (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/connect.js:67:37)
+    at emitTwo (events.js:87:13)
+    at Server.emit (events.js:172:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:528:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:88:23)
+TypeError: Cannot read property 'split' of undefined
+    at Object.livereload [as handle] (/home/ubuntu/quran-analysis/front/node_modules/connect-livereload/index.js:91:48)
+    at next (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:174:15)
+    at Function.app.handle (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:182:3)
+    at Server.app (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/connect.js:67:37)
+    at emitTwo (events.js:87:13)
+    at Server.emit (events.js:172:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:528:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:88:23)
+[32m>> [39mFile "app/scripts/controllers/main.js" changed.
+[4mRunning "newer:jshint:all" (newer) task[24m
+
+[4mRunning "jshint:all" (jshint) task[24m
+
+app/scripts/controllers/main.js
+  line 111  col 48  Missing semicolon.
+
+  ⚠  1 warning
+
+[33mWarning: Task "jshint:all" failed. Use --force to continue.[39m
+
+[31mAborted due to warnings.[39m
+
+
+Execution Time (2017-01-08 14:04:09 UTC-0)
+loading tasks                 305ms  ▇▇▇▇▇▇▇▇▇▇▇▇ 35%
+loading grunt-newer            51ms  ▇▇ 6%
+newer:jshint:all               15ms  ▇ 2%
+loading grunt-contrib-jshint  279ms  ▇▇▇▇▇▇▇▇▇▇▇ 32%
+jshint:all                    228ms  ▇▇▇▇▇▇▇▇▇ 26%
+Total 878ms
+
+[36mCompleted in 1.343s at Sun Jan 08 2017 14:04:10 GMT+0000 (UTC)[39m - Waiting...
+[4mRunning "serve" task[24m
+
+[4mRunning "clean:server" (clean) task[24m
+[32m>> [39m1 path cleaned.
+
+[4mRunning "wiredep:app" (wiredep) task[24m
+
+[4mRunning "wiredep:test" (wiredep) task[24m
+
+[4mRunning "concurrent:server" (concurrent) task[24m
+    
+    [4mRunning "copy:styles" (copy) task[24m
+    Copied 1 file
+    
+    [32mDone, without errors.[39m
+    
+    
+    Execution Time (2017-01-08 14:04:25 UTC-0)
+    loading tasks               263ms  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ 84%
+    loading grunt-contrib-copy   25ms  ▇▇▇ 8%
+    copy:styles                  23ms  ▇▇▇ 7%
+    Total 312ms
+    
+[4mRunning "postcss:server" (postcss) task[24m
+[32m>> [39m1 processed stylesheet created.
+
+[4mRunning "connect:livereload" (connect) task[24m
+Started connect web server on http://0.0.0.0:80
+
+[4mRunning "watch" task[24m
+Waiting...
+TypeError: Cannot read property 'split' of undefined
+    at Object.livereload [as handle] (/home/ubuntu/quran-analysis/front/node_modules/connect-livereload/index.js:91:48)
+    at next (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:174:15)
+    at Function.app.handle (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:182:3)
+    at Server.app (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/connect.js:67:37)
+    at emitTwo (events.js:87:13)
+    at Server.emit (events.js:172:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:528:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:88:23)
+TypeError: Cannot read property 'split' of undefined
+    at Object.livereload [as handle] (/home/ubuntu/quran-analysis/front/node_modules/connect-livereload/index.js:91:48)
+    at next (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:174:15)
+    at Function.app.handle (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:182:3)
+    at Server.app (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/connect.js:67:37)
+    at emitTwo (events.js:87:13)
+    at Server.emit (events.js:172:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:528:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:88:23)
+TypeError: Cannot read property 'split' of undefined
+    at Object.livereload [as handle] (/home/ubuntu/quran-analysis/front/node_modules/connect-livereload/index.js:91:48)
+    at next (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:174:15)
+    at Function.app.handle (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:182:3)
+    at Server.app (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/connect.js:67:37)
+    at emitTwo (events.js:87:13)
+    at Server.emit (events.js:172:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:528:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:88:23)
+TypeError: Cannot read property 'split' of undefined
+    at Object.livereload [as handle] (/home/ubuntu/quran-analysis/front/node_modules/connect-livereload/index.js:91:48)
+    at next (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:174:15)
+    at Function.app.handle (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:182:3)
+    at Server.app (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/connect.js:67:37)
+    at emitTwo (events.js:87:13)
+    at Server.emit (events.js:172:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:528:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:88:23)
+TypeError: Cannot read property 'split' of undefined
+    at Object.livereload [as handle] (/home/ubuntu/quran-analysis/front/node_modules/connect-livereload/index.js:91:48)
+    at next (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:174:15)
+    at Function.app.handle (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/proto.js:182:3)
+    at Server.app (/home/ubuntu/quran-analysis/front/node_modules/connect/lib/connect.js:67:37)
+    at emitTwo (events.js:87:13)
+    at Server.emit (events.js:172:7)
+    at HTTPParser.parserOnIncoming [as onIncoming] (_http_server.js:528:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:88:23)
