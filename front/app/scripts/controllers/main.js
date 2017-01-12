@@ -165,7 +165,7 @@ app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope, $t
 
 });
 
-app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie, $window) {
+app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie) {
 	$rootScope.rest2 = {};
 	$rootScope.selected = [];
 	$scope.show = false ;  
@@ -244,11 +244,16 @@ app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie, $w
 		else {
 			$rootScope.show3 = false;}
 		
-		if ($rootScope.show3 = true )
-		{$window.location.href ='#one_one'; }	
+		
 		
 	},true); 
 	
+	
+	$scope.go = function ( path, show  ) {
+		if (show == true ){
+		  $location.path( path );
+		}
+		};
 	
 	
 	$scope.select = trie ; 
