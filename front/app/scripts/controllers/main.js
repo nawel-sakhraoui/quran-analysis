@@ -165,7 +165,7 @@ app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope, $t
 
 });
 
-app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie) {
+app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie, $location) {
 	$rootScope.rest2 = {};
 	$rootScope.selected = [];
 	$scope.show = false ;  
