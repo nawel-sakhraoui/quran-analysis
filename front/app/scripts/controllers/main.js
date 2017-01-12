@@ -165,7 +165,7 @@ app.controller('MainCtrl',  function($scope, $http, elastic_word, $rootScope, $t
 
 });
 
-app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie) {
+app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie, $window) {
 	$rootScope.rest2 = {};
 	$rootScope.selected = [];
 	$scope.show = false ;  
@@ -250,6 +250,7 @@ app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie) {
 	// $rootScope.rest2.list_surats["الآية"].sort();
 	
 
+	
 });
 
 
