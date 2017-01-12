@@ -243,8 +243,13 @@ app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie, $w
 			$rootScope.show3 = true 	;}
 		else {
 			$rootScope.show3 = false;}
-			
+		
+		if ($rootScope.show3 = true )
+		{$window.location.href ='#one_one'; }	
+		
 	},true); 
+	
+	
 	
 	$scope.select = trie ; 
 	// $rootScope.rest2.list_surats["الآية"].sort();
