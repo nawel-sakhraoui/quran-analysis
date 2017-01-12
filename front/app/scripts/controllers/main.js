@@ -253,6 +253,7 @@ app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie, $l
 		if (show == true ){
 		  $location.path( path );
 		}
+		return show3;
 		};
 	
 	
