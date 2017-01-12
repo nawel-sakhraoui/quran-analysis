@@ -251,7 +251,7 @@ app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie, $l
 	
 	$scope.go = function ( path, show  ) {
 		if (show == true ){
-		  $location.path( path );
+			$window.location.href =  path ;
 		}
 		return show3;
 		};
