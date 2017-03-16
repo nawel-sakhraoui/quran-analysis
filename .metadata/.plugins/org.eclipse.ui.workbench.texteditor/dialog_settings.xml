@@ -2,24 +2,35 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="print" key="selection"/>
+		<item value="msg" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="print"/>
-			<item value="lag"/>
-			<item value="for"/>
+			<item value="myForm"/>
+			<item value="blabla"/>
+			<item value="000000"/>
+			<item value="#01DF01"/>
+			<item value="#64FE2E"/>
+			<item value="#86B404"/>
+			<item value="#8"/>
+			<item value="#F5ECCE"/>
 		</list>
 		<list key="replacehistory">
+			<item value="msg"/>
+			<item value="FFFFFF"/>
+			<item value="#04B431"/>
+			<item value="#01DF01"/>
+			<item value="#64FE2E"/>
+			<item value="#F5ECCE"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="338" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="406" key="DIALOG_HEIGHT"/>
-		<item value="490" key="DIALOG_X_ORIGIN"/>
-		<item value="99" key="DIALOG_Y_ORIGIN"/>
+		<item value="454" key="DIALOG_HEIGHT"/>
+		<item value="679" key="DIALOG_X_ORIGIN"/>
+		<item value="164" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

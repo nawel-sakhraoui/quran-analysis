@@ -264,5 +264,6 @@ app.controller('ResultCtrl', function($scope, $rootScope, elastic_ayat, trie, $l
 	
 });
 
+app.controller('SuratCtrl', function($scope, $rootScope, elastic_ayat) {
 
-
+});
